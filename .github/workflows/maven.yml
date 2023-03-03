@@ -32,7 +32,7 @@ jobs:
         cache: maven
         
     - name: Run tests with Maven 
-      run: mvn -B test --file Happypet.xml
+      run: mvn -B test --file Konfiguration/pom.xml
       
     - name: Publish Test Report
       uses: scacap/action-surefire-report@v1
@@ -40,7 +40,7 @@ jobs:
         fail_if_no_tests: true
     
     - name: Build with Maven
-      run: mvn -B package --file Happypet.xml
+      run: mvn -B package --file Konfiguration/pom.xml
       
     - name: Create Artifact
       uses: actions/upload-artifact@v3 #Artifact das benutzt wird
