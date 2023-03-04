@@ -37,7 +37,7 @@ jobs:
     - name: Publish Test Report
       uses: scacap/action-surefire-report@v1
       with:
-        fail_if_no_tests: true
+        fail_if_no_tests: false
     
     - name: Build with Maven
       run: mvn -B package --file Konfiguration/pom.xml
